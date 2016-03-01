@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Trashtalk</title>
+  <title>TrashTalk</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Slabo+27px|Lobster' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="topnav">
+    <li><a href="/">H</a></li>
+    <li><a href="/about">A</a></li>
+    <li><a href="/contact">C</a></li>
+  </nav>
+  <div class="headline">
+    <h1>Trash Talk</h1>
+    <h5>You're the Guru, They Suck</h5>
+  </div>
 
 <%= yield %>
 

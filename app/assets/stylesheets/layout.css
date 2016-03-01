@@ -1,0 +1,24 @@
+.headline {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  text-align: center;
+}
+
+.headline h1{
+  height: 30px;
+  padding-bottom: 30px;
+}
+
+.topnav {
+  display: flex;
+  list-style-type: none;
+}
+
+.topnav li{
+  padding: 10px;
+}
+
+/*font-family: 'Slabo 27px', serif;
+
+font-family: 'Lobster', cursive;
+*/
