@@ -10,6 +10,9 @@
 <%= flash[:notice] if flash[:notice] %>
 <%= flash[:alert] if flash[:alert] %>
 <body>
+  <% if current_user %>
+    <%= link_to 'logout', logout_path, method: :delete %>
+  <% end %>
   <nav class="topnav">
     <li><a href="/">H</a></li>
     <li><a href="/about">A</a></li>
