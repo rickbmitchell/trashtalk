@@ -7,6 +7,8 @@
   <link href='https://fonts.googleapis.com/css?family=Slabo+27px|Lobster' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
+<%= flash[:notice] if flash[:notice] %>
+<%= flash[:alert] if flash[:alert] %>
 <body>
   <nav class="topnav">
     <li><a href="/">H</a></li>
