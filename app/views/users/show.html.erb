@@ -1,1 +1,4 @@
 <%= @user.username %>
+<% if current_user and current_user == @user %>
+<p><%= link_to 'delete user', user_path(@user.id), method: :delete %></p>
+<% end %>
