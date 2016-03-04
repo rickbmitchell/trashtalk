@@ -1,0 +1,10 @@
+<h1>Create Your Profile</h1>
+<%= form_for @profile do |f| %>
+<%= f.label :fname %>
+<%= f.text_field :fname %>
+<%= f.label :lname %>
+<%= f.text_field :lname %>
+<%= f.label :bio %>
+<%= f.text_field :bio %>
+<%= f.submit :create %>
+<% end %>
