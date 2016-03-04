@@ -1,3 +1,11 @@
 <h1>Recent Posts</h1>
 
 <%= @posts %>
+
+<div class="posts">
+  <% @posts.each do |p|  %>
+  <h1><%= p.title %></h1></br>
+  <%= p.message %></br>
+  <strong><%= p.user.username %></strong></br>
+  <% end %>
+</div>
