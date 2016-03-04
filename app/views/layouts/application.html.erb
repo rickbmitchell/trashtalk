@@ -5,24 +5,31 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link href='https://fonts.googleapis.com/css?family=Slabo+27px|Lobster' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <%= flash[:notice] if flash[:notice] %>
 <%= flash[:alert] if flash[:alert] %>
 <body>
+<div class="sign">
   <% if current_user %>
     <%= link_to 'logout', logout_path, method: :delete %>
+</div>
+<div class="sign">
   <% else %>
-    <%= link_to 'sign up', new_user_path %>
-    <%= link_to 'login', login_path %>
+    <%= link_to 'Sign Up', new_user_path %>
+</div>
+<div class="sign">
+    <%= link_to 'Log In', login_path %>
   <% end %>
+</div>
   <nav class="topnav">
-    <li><a href="/">H</a></li>
-    <li><a href="/about">A</a></li>
-    <li><a href="/contact">C</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
   </nav>
   <div class="headline">
-    <h1>Trash Talk</h1>
+    <h1>Trash <span style="background-color: black; color:white">Talk</span></h1>
     <h5>Give Advice. Get Help. Talk Trash.</h5>
   </div>
 

@@ -7,6 +7,12 @@
 .headline h1{
   height: 30px;
   padding-bottom: 30px;
+  margin-top: 0px;
+}
+
+.headline h5{
+  height: 30px;
+  margin-top: 0px;
 }
 
 .topnav {
@@ -16,6 +22,48 @@
 
 .topnav li{
   padding: 10px;
+  display: inline-block;
+  margin: 5px;
+  text-align: left;
+  border: 1px solid #bbb;
+  padding: 0 30px;
+  text-decoration: none;
+  cursor: pointer;
+  float: left;
+}
+
+.topnav a:link {
+  text-decoration: none;
+  color: #707070;
+}
+
+.topnav a:hover {
+  color: gray;
+}
+
+.sign {
+  display: inline-block;
+  margin: 5px;
+  text-align: left;
+  border: 1px solid #bbb;
+  padding: 0 30px;
+  text-decoration: none;
+  cursor: pointer;
+  float: right;
+}
+
+.sign a:link {
+  text-decoration: none;
+  color: #707070;
+}
+
+.sign a:hover {
+  color: gray;
+}
+
+p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.2em;
 }
 
 /*font-family: 'Slabo 27px', serif;
