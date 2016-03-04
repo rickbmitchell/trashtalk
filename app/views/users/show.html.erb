@@ -1,8 +1,23 @@
-<%= @user.username %>
-<%#Add Create Profile link for new users %>
-<%#Add profile info %>
+<h2>Welcome <%= @user.username %></h2>
+
+<% if @user.profile != nil %>
+  <h3>Your Profile</h3>
+  <%= @user.profile.fname %>
+  <%= @user.profile.lname %>
+  <br><br>
+  <%= @user.profile.bio %>
+  <br><br>
+<% end %>
+
 <% if current_user and current_user == @user %>
-<%#Edit login info link %>
-<%#Edit profile info link %>
-<p><%= link_to 'Delete Your Account', user_path(@user.id), method: :delete %></p>
+
+  <% if @user.profile != nil %>
+  <%= link_to 'Edit Profile', edit_profile_path(@user.id), method: :get %>
+  <% else %>
+  <br><br>
+  <%= link_to 'Create Profile', new_profile_path(@user.id), method: :get %>
+  <% end %>
+  <br><br>
+  <%= link_to 'Delete Your Account', user_path(@user.id), method: :delete %>
+
 <% end %>
