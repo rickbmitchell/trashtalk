@@ -1,4 +1,8 @@
 <%= @user.username %>
+<%#Add Create Profile link for new users %>
+<%#Add profile info %>
 <% if current_user and current_user == @user %>
-<p><%= link_to 'delete user', user_path(@user.id), method: :delete %></p>
+<%#Edit login info link %>
+<%#Edit profile info link %>
+<p><%= link_to 'Delete Your Account', user_path(@user.id), method: :delete %></p>
 <% end %>

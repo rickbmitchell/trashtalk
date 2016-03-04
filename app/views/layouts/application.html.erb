@@ -12,6 +12,9 @@
 <body>
   <% if current_user %>
     <%= link_to 'logout', logout_path, method: :delete %>
+  <% else %>
+    <%= link_to 'sign up', new_user_path %>
+    <%= link_to 'login', login_path %>
   <% end %>
   <nav class="topnav">
     <li><a href="/">H</a></li>
@@ -20,7 +23,7 @@
   </nav>
   <div class="headline">
     <h1>Trash Talk</h1>
-    <h5>You're the Guru, They Suck</h5>
+    <h5>Give Advice. Get Help. Talk Trash.</h5>
   </div>
 
 <%= yield %>
