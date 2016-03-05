@@ -34,11 +34,14 @@ class PostsController < ApplicationController
 
   def update
     @post = get_post
-    @post.update(id: @post.id, title: params[:title], message: params[:message])
-      redirect_to root_path, notice: "Post was updated."
-    # else
-    #   render :edit
-    # end
+    if current_user
+      if current_user.id == @post.user_id
+      @post.update(id: @post.id, title: params[:title], message: params[:message])
+        redirect_to root_path, notice: "Post was updated."
+      else
+        redirect_to root_path, alert: "Not your post."
+      end
+    end
   end
 
   def destroy
