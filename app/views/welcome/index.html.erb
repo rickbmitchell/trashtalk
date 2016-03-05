@@ -1,8 +1,8 @@
-<h1>Recent Posts</h1>
+<h2>Recent Posts</h2>
 
 <div class="posts">
   <% @posts.each do |p|  %>
-  <h1><%= p.title %></h1></br>
+  <h3><%= p.title %></h3></br>
   <%= p.message %></br>
   <strong><%= p.user.username %></strong></br>
   <% end %>

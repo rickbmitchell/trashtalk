@@ -1,9 +1,13 @@
-<h1>Please log in</h1>
+<div class="form">
+<h2>Please log in</h2>
 
 <%= form_tag '/login', method: :post do %>
   <%= label_tag :email %>
   <%= email_field_tag :email%>
+  <br>
   <%= label_tag :password %>
   <%= password_field_tag :password%>
+  <br>
   <%= submit_tag :login %>
 <% end %>
+</div>
