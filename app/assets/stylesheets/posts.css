@@ -8,3 +8,17 @@
   width: 500px;
   height: 300px;
 }
+
+.posts-show {
+  width: 500px;
+  margin-left: 33%;
+}
+
+#new_comment > p {
+  border-bottom: solid black 1px;
+}
+
+.blog-box {
+  padding-bottom: 150px;
+  border-bottom: 1px solid;
+}
