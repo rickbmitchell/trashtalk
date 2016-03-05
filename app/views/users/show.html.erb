@@ -1,7 +1,7 @@
-<h2>Welcome <%= @user.username %></h2>
+
 
 <% if @user.profile != nil %>
-  <h3>Your Profile</h3>
+  <h3>Profile</h3>
   <%= @user.profile.fname %>
   <%= @user.profile.lname %>
   <br><br>
@@ -11,6 +11,8 @@
 
 <% if current_user and current_user == @user %>
 
+<h2>Welcome <%= @user.username %></h2>
+
   <% if @user.profile != nil %>
   <%= link_to 'Edit Profile', edit_profile_path(@user.id), method: :get %>
   <% else %>
@@ -19,5 +21,11 @@
   <% end %>
   <br><br>
   <%= link_to 'Delete Your Account', user_path(@user.id), method: :delete %>
+  <br><br>
+  <%= link_to 'Write a Post', new_post_path(@user.id), method: :get %>
 
 <% end %>
+
+<h2>Posts</h2>
+
+<%= render 'editpost' %>

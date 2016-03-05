@@ -1,0 +1,12 @@
+<div class="form">
+<h2>Create Your Post</h2>
+<%= form_for @post do |f| %>
+  <%= label_tag :title %>
+  <%= text_field_tag :title%>
+  <br>
+  <%= label_tag :message %>
+  <%= text_area_tag :message%>
+  <br>
+  <%= submit_tag :create %>
+<% end %>
+</div>

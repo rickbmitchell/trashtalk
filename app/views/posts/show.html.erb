@@ -1,15 +1,18 @@
 <h1><%= @post.title %> </h1>
-<p><%= @post.body %></p>
+<p><%= @post.message %></p>
 <hr>
 <% if current_user %>
   <h4>Post a comment below</h4>
   <%= form_for [@post, @comment] do |f| %>
     <%= f.text_area :comment %>
     <%= f.submit %>
+
+    <% @post.comments.each do |comment| %>
+    <p><%= comment.comment %> (<%= comment.user.username %>)</p>
+    <% end %>
+
   <% end %>
 <% else %>
   <h5><%= link_to 'Login', login_path %> to comment</h5>
 <% end %>
 
-<% post.comments.each do |comment| %>
-  <p><%= comment.comment %> (<%= comment.user.name %>)</p>

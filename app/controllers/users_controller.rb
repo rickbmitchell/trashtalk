@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   def show
     @user = get_user
     @profile = get_profile
+    @posts = get_posts
   end
 
   def destroy
@@ -36,6 +37,10 @@ class UsersController < ApplicationController
     session[:user_id] = nil
     flash[:notice] = "Your account was deleted"
     redirect_to '/'
+  end
+
+  def get_posts
+    Post.where(user_id: params[:id])
   end
 
   private

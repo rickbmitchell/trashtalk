@@ -10,24 +10,33 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = set_post
     @comment = Comment.new
   end
 
   def edit
+    @post = set_post
   end
 
   def create
-    @post = Post.new(post_params)
+    # puts params
+    # @post = Post.new(post_params)
+    current_user
+    @post = Post.create(user_id: current_user.id, title: params[:title], message: params[:message])
     if @post.save
-      redirect_to @post, notice: "New post created."
+      flash[:notice] = "Post created!"
+      redirect_to root_path
     else
-      render :new
+      flash[:alert] = "There was a problem"
+      redirect_to 'posts/new'
     end
   end
 
   def update
-    if @post.update(post_params)
-      redirect_to @post, notice: "Post was updated."
+    puts params
+    user = current_user
+    if user.post.update(params[:post])
+      redirect_to user_path, notice: "Post was updated."
     else
       render :edit
     end
@@ -41,11 +50,11 @@ class PostsController < ApplicationController
   private
 
   def set_post
-    @post = Post.find(params[:id])
+    Post.find(params[:id])
   end
 
-  def post_params
-    params.require(:post).permit(:title, :message).merge(user: current_user)
-  end
+  # def post_params
+  #   params.require(:post).permit(:title, :message).merge(user: current_user)
+  # end
 
 end

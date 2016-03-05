@@ -1,0 +1,22 @@
+<% if current_user and current_user == @user %>
+
+  <div class="posts">
+    <% @posts.each do |p|  %>
+    <h3><%= p.title %></h3></br>
+    <%= p.message %></br>
+    <%= link_to("Comment", "/posts/" + p.id.to_s) %>
+    <%= link_to "Edit Post", "/posts/" + p.id.to_s + "/edit" %>
+    <% end %>
+  </div>
+
+<% else %>
+
+  <div class="posts">
+    <% @posts.each do |p|  %>
+    <h3><%= p.title %></h3></br>
+    <%= p.message %></br>
+    <%= link_to("Comment", "/posts/" + p.id.to_s) %>
+    <% end %>
+  </div>
+
+<% end %>
