@@ -6,6 +6,7 @@
     <%= p.message %></br>
     <%= link_to("Comment", "/posts/" + p.id.to_s) %>
     <%= link_to "Edit Post", "/posts/" + p.id.to_s + "/edit" %>
+    <%= link_to "Delete Post", "/posts/" + p.id.to_s, method: :delete %>
     <% end %>
   </div>
 

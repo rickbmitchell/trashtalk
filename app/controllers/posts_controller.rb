@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :get_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -10,12 +10,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = set_post
+    @post = get_post
     @comment = Comment.new
   end
 
   def edit
-    @post = set_post
+    @post = get_post
   end
 
   def create
@@ -33,28 +33,29 @@ class PostsController < ApplicationController
   end
 
   def update
-    puts params
-    user = current_user
-    if user.post.update(params[:post])
-      redirect_to user_path, notice: "Post was updated."
-    else
-      render :edit
-    end
+    @post = get_post
+    @post.update(id: @post.id, title: params[:title], message: params[:message])
+      redirect_to root_path, notice: "Post was updated."
+    # else
+    #   render :edit
+    # end
   end
 
   def destroy
+    @user = current_user
+    @post = get_post
     @post.destroy
-    redirect_to posts_path, notice: "Post was deleted."
+    redirect_to user_path(@user), notice: "Post was deleted."
   end
 
   private
 
-  def set_post
-    Post.find(params[:id])
-  end
+  # def set_post
+  #   current_user.posts.where(id: params[:id]).first
+  # end
 
   # def post_params
-  #   params.require(:post).permit(:title, :message).merge(user: current_user)
+  #   params.require(:post).permit(:title, :message)
   # end
 
 end
