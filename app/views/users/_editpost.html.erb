@@ -3,7 +3,7 @@
   <div class="posts">
     <% @posts.each do |p|  %>
     <h3><%= p.title %></h3></br>
-    <%= p.message %></br>
+    <p><%= p.message %></p></br>
     <%= link_to("Comment", "/posts/" + p.id.to_s) %>
     <%= link_to "Edit Post", "/posts/" + p.id.to_s + "/edit" %>
     <%= link_to "Delete Post", "/posts/" + p.id.to_s, method: :delete %>

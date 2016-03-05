@@ -1,3 +1,64 @@
 .form {
   text-align: center;
 }
+
+h2 {
+  margin-top: 30px;
+}
+
+.posts h3 {
+  margin-bottom: 0px;
+  margin-top: 50px;
+}
+
+.posts a{
+  padding-right: 10px;
+  text-decoration: none;
+  color: #006BB6;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile p{
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+}
+
+.profbutton {
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  border: 1px solid #bbb;
+  background-color: #006BB6;
+  cursor: pointer;
+  margin-right: 450px;
+  margin-left: 450px;
+}
+
+.profbutton a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.2em;
+}
+
+.profbutton2 {
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  border: 1px solid #bbb;
+  background-color: #ED174C;
+  cursor: pointer;
+  margin-right: 450px;
+  margin-left: 450px;
+}
+
+.profbutton2 a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.2em;
+}
