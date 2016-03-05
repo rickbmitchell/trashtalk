@@ -15,6 +15,9 @@
 <div class="sign">
     <%= link_to 'Logout', logout_path, method: :delete %>
 </div>
+<div class="sign">
+  <%= link_to 'Profile', user_path(current_user.id) %>
+</div>
 <% else %>
 <div class="sign">
     <%= link_to 'Sign Up', new_user_path %>
