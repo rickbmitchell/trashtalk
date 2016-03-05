@@ -1,28 +1,35 @@
 
-
+<div class="profile">
 <% if @user.profile != nil %>
-  <h3>Profile</h3>
-  <%= @user.profile.fname %>
-  <%= @user.profile.lname %>
-  <br><br>
-  <%= @user.profile.bio %>
-  <br><br>
+  <h2>Profile</h2>
+  <p>Name: <%= @user.profile.fname %>
+  <%= @user.profile.lname %></p>
+  <p>Bio: <%= @user.profile.bio %></p>
 <% end %>
+</div>
 
 <% if current_user and current_user == @user %>
 
 <h2>Welcome <%= @user.username %></h2>
 
   <% if @user.profile != nil %>
-  <%= link_to 'Edit Profile', edit_profile_path(@user.id), method: :get %>
+    <div class="profbutton">
+      <%= link_to 'Edit Profile', edit_profile_path(@user.id), method: :get %>
+    </div>
   <% else %>
-  <br><br>
-  <%= link_to 'Create Profile', new_profile_path(@user.id), method: :get %>
+    <br><br>
+    <div class="profbutton">
+      <%= link_to 'Create Profile', new_profile_path(@user.id), method: :get %>
+    </div>
   <% end %>
-  <br><br>
-  <%= link_to 'Delete Your Account', user_path(@user.id), method: :delete %>
-  <br><br>
-  <%= link_to 'Write a Post', new_post_path(@user.id), method: :get %>
+    <br><br>
+    <div class="profbutton">
+      <%= link_to 'Write a Post', new_post_path(@user.id), method: :get %>
+    </div>
+    <br><br>
+    <div class="profbutton2">
+      <%= link_to 'Delete Your Account', user_path(@user.id), method: :delete %>
+    </div>
 
 <% end %>
 
