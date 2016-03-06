@@ -1,3 +1,41 @@
 .form {
   text-align: center;
+  background-color: #006BB6;
+  margin-right: 400px;
+  margin-left: 400px;
+  height: 200px;
+  vertical-align: center;
+  padding-top: 1px;
+  color: white;
+}
+
+.form2 {
+  text-align: center;
+  background-color: #006BB6;
+  margin-right: 380px;
+  margin-left: 400px;
+  height: 500px;
+  vertical-align: center;
+  padding-top: 1px;
+  color: white;
+}
+
+#email{
+  margin-bottom: 10px;
+}
+
+#password{
+  margin-bottom: 10px;
+}
+
+#user_username{
+  margin-bottom: 10px;
+}
+
+#user_email{
+  margin-bottom: 10px;
+}
+
+#user_password{
+  margin-bottom: 10px;
 }
