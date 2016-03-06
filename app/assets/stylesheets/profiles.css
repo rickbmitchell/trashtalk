@@ -1,0 +1,20 @@
+.edit_profile {
+  text-align: center;
+  margin-right: 400px;
+  margin-left: 400px;
+  height: 200px;
+  vertical-align: center;
+  padding-top: 1px;
+}
+
+#profile_fname{
+  margin-bottom: 10px;
+}
+
+#profile_lname{
+  margin-bottom: 10px;
+}
+
+#profile_bio{
+  margin-bottom: 10px;
+}
