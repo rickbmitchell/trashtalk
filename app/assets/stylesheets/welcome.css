@@ -6,6 +6,14 @@ h2 {
   text-align: center;
 }
 
+/*.posts:nth-of-type(2n+1) p{
+  background-color: gray;
+}
+
+.posts:nth-of-type(2n+2) p{
+  background-color: white;
+}*/
+
 .about {
   text-align: center;
   margin-right: 380px;
