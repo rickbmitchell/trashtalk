@@ -2,10 +2,10 @@
 <h2>Edit Your Post</h2>
 <%= form_for @post do |f| %>
   <%= f.label :title %>
-  <%= f.text :title%>
+  <%= f.text_field :title%>
   <br>
   <%= f.label :message %>
-  <%= f.text :message%>
+  <%= f.text_field :message%>
   <br>
   <%= f.submit :update %>
 <% end %>
