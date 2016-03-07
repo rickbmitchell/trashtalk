@@ -1,9 +1,8 @@
 <h2>Recent Posts</h2>
 <div class="posts">
   <% @posts.each do |p|  %>
-  <h3><%= p.title %></h3></br>
-  <p><%= p.message %></p></br>
-  <p>by: <strong><%= link_to p.user.username, profile_path(p.user_id), method: :get %></strong></p></br>
-  <%= link_to("Comment", "/posts/" + p.id.to_s) %>
+    <h3><%= p.title %></h3></br>
+    <p><%= p.message.first(776) %>...<%= link_to("Continue Reading", "/posts/" + p.id.to_s) %></p></br>
+    <p>by: <strong><%= link_to p.user.username, profile_path(p.user_id), method: :get %></strong></p></br>
   <% end %>
 </div>

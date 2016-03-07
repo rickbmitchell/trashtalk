@@ -11,12 +11,12 @@
         <%= f.submit %>
 
         <% @post.comments.each do |comment| %>
-        <p><%= comment.comment %> (<%= comment.user.username %>)</p>
+        <p><%= comment.comment %> (<strong><%= link_to comment.user.username, profile_path(comment.user_id), method: :get %></strong>)</p>
         <% end %>
 
       <% end %>
     <% else %>
-    <h5><%= link_to 'Login', login_path %> to comment</h5>
+      <h5><%= link_to 'Login', login_path %> to comment</h5>
     <% end %>
   </div>
 </div>
