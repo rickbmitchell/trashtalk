@@ -3,7 +3,7 @@
   <% @posts.each do |p|  %>
   <h3><%= p.title %></h3></br>
   <p><%= p.message %></p></br>
-  <p>by: <strong><%= p.user.username %></strong></p></br>
+  <p>by: <strong><%= link_to p.user.username, profile_path(p.user_id), method: :get %></strong></p></br>
   <%= link_to("Comment", "/posts/" + p.id.to_s) %>
   <% end %>
 </div>

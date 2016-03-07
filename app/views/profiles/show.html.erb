@@ -1,4 +1,12 @@
-<%#We probably don't want this page but we do want an Edit Profile page %>
-<%= @profile.fname %>
-<%= @profile.lname %>
-<%= @profile.bio %>
+<div class="profile">
+  <h2><%= @profile.user.username %>'s Profile</h2>
+  <p>Name: <%= @profile.fname %> <%= @profile.lname %></p>
+  <p>Bio: <%= @profile.bio %></p>
+</div>
+<div class="posts">
+  <% @posts.each do |p|  %>
+  <h3><%= p.title %></h3></br>
+  <%= p.message %></br>
+  <%= link_to("Comment", "/posts/" + p.id.to_s) %>
+  <% end %>
+</div>
