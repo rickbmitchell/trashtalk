@@ -9,6 +9,17 @@
   height: 300px;
 }
 
+#post_title {
+  width: 300px;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+#post_message {
+  width: 500px;
+  height: 300px;
+}
+
 .posts-show {
   width: 500px;
   margin-left: 33%;

@@ -5,7 +5,8 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @profile = get_profile
+    @profile = Profile.find(params[:id])
+    @posts = Post.where(user_id: params[:id])
   end
 
   def edit
