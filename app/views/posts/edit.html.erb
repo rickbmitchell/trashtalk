@@ -1,12 +1,12 @@
-<div class="form">
+<div class="form2">
 <h2>Edit Your Post</h2>
 <%= form_for @post do |f| %>
-  <%= label_tag :title %>
-  <%= text_field_tag :title%>
+  <%= f.label :title %>
+  <%= f.text_field :title%>
   <br>
-  <%= label_tag :message %>
-  <%= text_area_tag :message%>
+  <%= f.label :message %>
+  <%= f.text_area :message%>
   <br>
-  <%= submit_tag :update %>
+  <%= f.submit :update %>
 <% end %>
-</div> 
+</div>
